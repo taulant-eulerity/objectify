@@ -1,0 +1,33 @@
+<web-app
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+        version="2.5"
+>
+
+    <display-name>Datastore with Objectify example</display-name>
+
+    <!-- Servlet declaration -->
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>com.company.javaserver2.MyServlet</servlet-class>
+    </servlet>
+
+    <!-- Servlet mapping -->
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+    <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+</web-app>
