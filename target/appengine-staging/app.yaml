@@ -5,6 +5,8 @@ derived_file_type:
 - java_precompiled
 threadsafe: True
 auto_id_policy: default
+beta_settings:
+  'source_reference': 'b2f7f0c6d30aab9ef98e4bce9de47a647f382999'
 api_version: 'user_defined'
 handlers:
 - url: (/.*)

@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class MyServlet extends HttpServlet {
 
@@ -49,7 +51,7 @@ public class MyServlet extends HttpServlet {
             out.println("<h1>Welcome, Taulant!</h1>");
 
             out.println("<form method='POST' action='/'>"); // Submitting to the same URL '/'
-            out.println("<input type='submit' value='Save Hello'>");
+            out.println("<input type='submit' name='submit_button' value='Save Hello'>");
             out.println("</form>");
 
             out.println("</body>");
@@ -61,7 +63,10 @@ public class MyServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        OfyService.ofy().save().entity(new User()).now();
+        String value = req.getParameter("submit_button");
+
+
+        OfyService.ofy().save().entity(new MyEntity(value)).now();
         resp.sendRedirect("/");
 
 //        Datastore datastore = DatastoreOptions.getDefaultInstance().getService(); // Authorized Datastore service
@@ -69,7 +74,7 @@ public class MyServlet extends HttpServlet {
 //        Key key = datastore.allocateId(keyFactory.newKey()); // Generate a unique ID for the new entity
 //
 //        List<Value<String>> emptyList = new ArrayList<>();
-//        emptyList.add(StringValue.of("")); // Add empty string to list
+////        emptyList.add(StringValue.of("")); // Add empty string to list
 //
 //        // Create the entity and set properties
 //        Entity userEntity = Entity.newBuilder(key)
@@ -80,8 +85,7 @@ public class MyServlet extends HttpServlet {
 //                .build();
 //
 //        datastore.put(userEntity); // Save the entity
-//
-//        resp.sendRedirect("/");
+
     }
 
     // Include your helper methods here

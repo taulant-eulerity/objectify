@@ -27,6 +27,13 @@ public class User {
         this.initSet = new HashSet<>();
     }
 
+
+    public User(List initList, Set initSet) {
+        this.initList = initList;
+        this.initSet = initSet;
+    }
+
+
     public User(List list, List initList, Set set, Set initSet) {
         this.list = list;
         this.initList = initList;
