@@ -18,5 +18,9 @@ public class MyEntity {
         return value;
     }
 
+    public String getNewStringr(String val) {
+        return val + "NW";
+    }
+
     // Include getters and setters as necessary
 }
