@@ -20,6 +20,9 @@ public class MyServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String path = req.getRequestURI();
+        Set<String> me = new HashSet<>();
+
+        me.add("New");
 
         if ("/get".equals(path)) {
             // Handle /get endpoint

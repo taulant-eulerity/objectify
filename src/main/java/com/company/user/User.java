@@ -28,13 +28,13 @@ public class User {
     }
 
 
-    public User(List initList, Set initSet) {
+    public User(List<String> initList, Set<String> initSet) {
         this.initList = initList;
         this.initSet = initSet;
     }
 
 
-    public User(List list, List initList, Set set, Set initSet) {
+    public User(List<String> list, List<String> initList, Set<String> set, Set<String> initSet) {
         this.list = list;
         this.initList = initList;
         this.set = set;
