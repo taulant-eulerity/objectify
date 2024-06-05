@@ -59,4 +59,8 @@ public class User {
     public Set<String> getInitSet() {
         return initSet;
     }
+
+public void setList(List<String> list) {
+    this.list = list;
+    }
 }
