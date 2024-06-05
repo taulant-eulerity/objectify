@@ -18,5 +18,10 @@ public class MyEntity {
         return value;
     }
 
+public String mergeSort(String list){
+    return "new";
+}
+
+
     // Include getters and setters as necessary
 }
