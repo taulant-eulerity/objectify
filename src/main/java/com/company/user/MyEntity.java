@@ -19,7 +19,7 @@ public class MyEntity {
     }
 
 public String mergeSort(String list){
-    return "new";
+    return "new" + list;
 }
 
 
