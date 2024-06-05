@@ -15,7 +15,7 @@ public class MyEntity {
     }
 
     public String getValue() {
-        return value;
+        return value + "a";
     }
 
     // Include getters and setters as necessary
